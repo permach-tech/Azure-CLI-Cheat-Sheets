@@ -8,7 +8,7 @@ az ad user list --query '[].userPrincipalName' --output tsv
 az ad signed-in-user show
 
 # list user's role assignments
-az role assignment list --all --assignee persell.machuca@smoothieking.com --output json --query '[].{principalName:principalName, roleDefinitionName:roleDefinitionName, scope:scope}'
+az role assignment list --all --assignee user@contoso.com --output json --query '[].{principalName:principalName, roleDefinitionName:roleDefinitionName, scope:scope}'
 
 # Show a user
 az ad user show --id $mail --query "displayName"
@@ -38,10 +38,3 @@ az ad user show \
 # delete one user
 az ad user delete \
     --id UserName@example.com
-
-# delete all users
-allUsers=$(cat ./user-names.txt)
-for userName in $allUsers; do
-    az ad user delete \
-        --id "$userName@example.com"
-done
