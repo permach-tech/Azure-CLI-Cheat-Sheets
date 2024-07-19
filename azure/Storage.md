@@ -14,13 +14,11 @@ az storage account list -g MyResourceGroup
 ```
 
 # create a general-purpose v2 storage account with read access LRS
-
-## First create a resource group
 ```shell
+# First create a resource group
 az group create --name your-rg --location southcentralus
-```
-## Next create the STorage Account
-```shell
+
+# Next create the Storage Account
 az storage account create \
 --name test-sa-v2-persell \
 --resource-group your-rg \
