@@ -9,13 +9,13 @@ az storage account list -g MyResourceGroup
 
 # create a general-purpose v2 storage account with read access LRS
 az storage account create \
-  --name your-sa-name-here \
-  --resource-group your-rg-name-here \
-  --location southcentralus \
-  --sku Standard_LRS \
-  --kind StorageV2 \
-  --min-tls-version TLS1_2 \
-  --allow-blob-public-access false
+--name test-sa-v2-persell \
+--resource-group test-rg-persellmach \
+--location southcentralus \
+--sku Standard_LRS \
+--kind StorageV2 \
+--min-tls-version TLS1_2 \
+--allow-blob-public-access false
 
 # Delete a storage account
 az storage account delete --name <storage-account-name> --resource-group <resource-group-name>
